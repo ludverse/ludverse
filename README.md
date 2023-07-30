@@ -1,8 +1,8 @@
 # ludverse
 
-learner of the language Rust but fluent speaker of the conlang "toki pona"
+learner of the language Rust but fluent speaker of the conlang toki pona.
 
-jan sewi li moli. mi mute li moli e ona
+jan sewi li moli. mi mute li moli e ona.
 
 ![Rust](https://img.shields.io/badge/Rust-black?style=for-the-badge&logo=rust&logoColor=#E57324)
 ![TypeScript](https://img.shields.io/badge/TypeScript-007ACC?style=for-the-badge&logo=typescript&logoColor=white)
