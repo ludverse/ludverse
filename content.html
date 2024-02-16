@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        body {
+            margin: 0;
+            background: #23272a;
+        }
+
+        * {
+            margin: 0;
+            font-family: sans-serif;
+        }
+
+        .main {
+            color: #ffffff;
+        }
+
+        .msg {
+            --delay: 0ms;
+            margin: 8px 0;
+            padding: 8px 32px;
+            display: flex;
+            transition: 100ms;
+        }
+
+        .msg:hover {
+            background: #ffffff10;
+        }
+
+        .msg-usrimg {
+            height: 40px;
+            border-radius: 50%;
+        }
+
+        .msg-left {
+            margin-right: 16px;
+        }
+
+        .msg-right {
+        }
+
+        .msg-usrname {
+            font-weight: 600;
+        }
+
+        .msg-usrname:hover {
+            text-decoration: underline;
+        }
+
+        .msg-content {
+            margin-top: 2px;
+        }
+
+
+        .msg, .msg-content {
+            opacity: 0;
+            animation-delay: var(--delay);
+            animation-name: msgdelay;
+            animation-fill-mode: forwards;
+        }
+
+        @keyframes msgdelay {
+            from {
+                opacity: 0;
+            }
+
+            to {
+                opacity: 1;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="main">
+        <div class="msg" style="--delay: 600ms">
+            <div class="msg-left">
+                <img class="msg-usrimg" src="https://avatars.githubusercontent.com/u/62475903?v=4" />
+            </div>
+            <div class="msg-right">
+                <p class="msg-usrname">ludv</p>
+                <p class="msg-content">hello :)</p>
+                <p class="msg-content" style="--delay: 2300ms">welcome to my github profile</p>
+            </div>
+        </div>
+        <div class="msg" style="--delay: 5400ms">
+            <div class="msg-left">
+                <img class="msg-usrimg" src="https://avatars.githubusercontent.com/u/62475903?v=4" />
+            </div>
+            <div class="msg-right">
+                <p class="msg-usrname">ludv</p>
+                <p class="msg-content">go check out some of my repos:</p>
+                <p class="msg-content" style="--delay: 6400ms">link</p>
+            </div>
+        </div>
+    </div>
+</body>
+</html>
