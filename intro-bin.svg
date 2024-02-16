@@ -163,7 +163,7 @@
                     </div>
                     <div class="msg-right">
                         <p class="msg-usrname">ludv</p>
-                        <p class="msg-content anim" style="--delay: 2200ms">hello :)</p>
+                        <p class="msg-content anim" style="--delay: 2200ms">hello there :)</p>
                         <p class="msg-content anim" style="--delay: 5000ms">welcome to my github profile</p>
                         <div class="msg-typing" style="--duration: 5000ms">
                             <span class="msg-typingdot" style="--delay-order: 1"></span>
@@ -179,9 +179,11 @@
                     </div>
                     <div class="msg-right">
                         <p class="msg-usrname">ludv</p>
-                        <p class="msg-content anim" style="--delay: 9400ms">i mostly do coding in rust nowadays but sometimes it happens that i work html like for this little intro</p>
+                        <p class="msg-content anim" style="--delay: 9400ms">i mostly do coding in rust nowadays but sometimes it happens that i work in html like for this little intro</p>
                         <p class="msg-content anim" style="--delay: 14000ms">rn im working on an interpreter for my own programming language oxid</p>
-                        <div class="msg-typing" style="--duration: 14000ms">
+                        <p class="msg-content anim" style="--delay: 17000ms">go check it out!</p>
+                        <p class="msg-content anim" style="--delay: 19000ms">it'd be cool to see what you can make with it</p>
+                        <div class="msg-typing" style="--duration: 19000ms">
                             <span class="msg-typingdot" style="--delay-order: 1"></span>
                             <span class="msg-typingdot" style="--delay-order: 2"></span>
                             <span class="msg-typingdot" style="--delay-order: 3"></span>
