@@ -179,7 +179,7 @@
                     </div>
                     <div class="msg-right">
                         <p class="msg-usrname">ludv</p>
-                        <p class="msg-content anim" style="--delay: 9400ms">i mostly do coding in rust nowadays but sometimes it happens that i work html like for this little intro</p>
+                        <p class="msg-content anim" style="--delay: 9400ms">i mostly do coding in rust nowadays but sometimes it happens that i work in html like for this little intro</p>
                         <p class="msg-content anim" style="--delay: 14000ms">rn im working on an interpreter for my own programming language oxid</p>
                         <div class="msg-typing" style="--duration: 14000ms">
                             <span class="msg-typingdot" style="--delay-order: 1"></span>
