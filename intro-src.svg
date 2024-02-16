@@ -1,16 +1,18 @@
-<svg fill="none" viewBox="0 0 600 300" width="600" height="300" xmlns="http://www.w3.org/2000/svg">
+<svg fill="none" viewBox="0 0 600 400" width="600" height="400" xmlns="http://www.w3.org/2000/svg">
     <foreignObject width="100%" height="100%">
         <div xmlns="http://www.w3.org/1999/xhtml">
             <style>
                 * {
                     --bg-fade-delay: 600ms;
                     --bg-fade-duration: 1500ms;
+                    --typing-speed: 750ms;
                     margin: 0;
                     font-family: sans-serif;
                 }
 
                 .main {
                     padding: 8px 0;
+                    height: 400px;
                     background: #31333800;
                     color: #ffffff;
                     border-radius: 24px;
@@ -18,6 +20,7 @@
                     animation-delay: var(--bg-fade-delay);
                     animation-name: bg-fade;
                     animation-fill-mode: forwards;
+                    box-sizing: border-box;
                 }
 
                 .msg {
@@ -38,6 +41,8 @@
                 }
 
                 .msg-right {
+                    display: flex;
+                    flex-direction: column;
                 }
 
                 .msg-usrname {
@@ -45,16 +50,49 @@
                 }
 
                 .msg-content {
-                    margin-top: 2px;
+                    margin-top: 0;
+                    line-height: 0;
+                    overflow: hidden;
                 }
 
 
-                .msg[data-anim], .msg-content[data-anim] {
+                .msg.anim, .msg-content.anim {
                     opacity: 0;
-                    animation-duration: 300ms;
+                    animation-duration: 150ms;
                     animation-delay: calc(var(--bg-fade-delay) + var(--bg-fade-duration) + var(--delay));
-                    animation-name: msgdelay;
+                    animation-name: msg-content-delay;
                     animation-fill-mode: forwards;
+                }
+
+                .msg-typing {
+                    margin-top: 4px;
+                    display: flex;
+                    gap: 6px;
+                    opacity: 1;
+                    animation-duration: calc(var(--bg-fade-delay) + var(--bg-fade-duration) + var(--duration));
+                    animation-name: msg-typing-delay;
+                    animation-fill-mode: forwards;
+                }
+
+                .msg-typingdot {
+                    width: 6px;
+                    height: 6px;
+                    display: flex;
+                    align-items: center;
+                    justify-content: center;
+                }
+
+                .msg-typingdot::after {
+                    content: "";
+                    width: 3px;
+                    width: 3px;
+                    display: block;
+                    background: #ffffff;
+                    border-radius: 50%;
+                    animation-duration: 1500ms;
+                    animation-delay: calc(var(--bg-fade-delay) + var(--bg-fade-duration) + (var(--typing-speed) / 3 * var(--delay-order)));
+                    animation-name: typingdot;
+                    animation-iteration-count: infinite;
                 }
 
                 @keyframes bg-fade {
@@ -67,39 +105,92 @@
                     }
                 }
 
-                @keyframes msgdelay {
+                @keyframes msg-typing-delay {
+                    0% {
+                        opacity: 0;
+                    }
+
+                    1% {
+                        opacity: 1;
+                    }
+
+                    99% {
+                        opacity: 1;
+                    }
+
+                    100% {
+                        opacity: 0;
+                    }
+                }
+
+                @keyframes msg-content-delay {
                     from {
                         opacity: 0;
+                        margin-top: 4px;
+                        line-height: initial;
                     }
 
                     to {
                         opacity: 1;
+                        margin-top: 4px;
+                        line-height: initial;
+                    }
+                }
+
+                @keyframes typingdot {
+                    0% {
+                        width: 4px;
+                        height: 4px;
+                    }
+
+                    50% {
+                        width: 7px;
+                        height: 7px;
+                    }
+
+                    100% {
+                        width: 4px;
+                        height: 4px;
                     }
                 }
             </style>
             
-    <div class="main">
-        <div class="msg" data-anim="true" style="--delay: 200ms">
-            <div class="msg-left">
-                <img class="msg-usrimg" src="[USRAVATARLINK]" />
+            <div class="main">
+
+                <div class="msg anim" style="--delay: 0ms">
+                    <div class="msg-left">
+                        <img class="msg-usrimg" src="[USRAVATARLINK]" />
+                    </div>
+                    <div class="msg-right">
+                        <p class="msg-usrname">ludv</p>
+                        <p class="msg-content anim" style="--delay: 1200ms">hello :)</p>
+                        <p class="msg-content anim" style="--delay: 3000ms">welcome to my github profile</p>
+                        <div class="msg-typing" style="--duration: 3000ms">
+                            <span class="msg-typingdot" style="--delay-order: 1"></span>
+                            <span class="msg-typingdot" style="--delay-order: 2"></span>
+                            <span class="msg-typingdot" style="--delay-order: 3"></span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="msg anim" style="--delay: 4400ms">
+                    <div class="msg-left">
+                        <img class="msg-usrimg" src="[USRAVATARLINK]" />
+                    </div>
+                    <div class="msg-right">
+                        <p class="msg-usrname">ludv</p>
+                        <p class="msg-content anim" style="--delay: 8000ms">i mostly do coding in rust nowadays but sometimes it happens that i work html like for this little intro</p>
+                        <p class="msg-content anim" style="--delay: 11600ms">rn im working on an interpreter for my own programming language oxid</p>
+                        <div class="msg-typing" style="--duration: 11600ms">
+                            <span class="msg-typingdot" style="--delay-order: 1"></span>
+                            <span class="msg-typingdot" style="--delay-order: 2"></span>
+                            <span class="msg-typingdot" style="--delay-order: 3"></span>
+                        </div>
+                    </div>
+
+                </div>
+
             </div>
-            <div class="msg-right">
-                <p class="msg-usrname">ludv</p>
-                <p class="msg-content">hello :)</p>
-                <p class="msg-content" data-anim="true" style="--delay: 2000ms">welcome to my github profile</p>
-            </div>
-        </div>
-        <div class="msg" data-anim="true" style="--delay: 5100ms">
-            <div class="msg-left">
-                <img class="msg-usrimg" src="[USRAVATARLINK]" />
-            </div>
-            <div class="msg-right">
-                <p class="msg-usrname">ludv</p>
-                <p class="msg-content">go check out some of my repos:</p>
-                <p class="msg-content" data-anim="true" style="--delay: 6400ms">link</p>
-            </div>
-        </div>
-    </div>
         </div>
     </foreignObject>
 </svg>
