@@ -81,7 +81,7 @@
     <div class="main">
         <div class="msg" data-anim="true" style="--delay: 200ms">
             <div class="msg-left">
-                <img class="msg-usrimg" src="https://avatars.githubusercontent.com/u/62475903?v=4" />
+                <img class="msg-usrimg" src="[USRAVATARLINK]" />
             </div>
             <div class="msg-right">
                 <p class="msg-usrname">ludv</p>
@@ -91,7 +91,7 @@
         </div>
         <div class="msg" data-anim="true" style="--delay: 5100ms">
             <div class="msg-left">
-                <img class="msg-usrimg" src="https://avatars.githubusercontent.com/u/62475903?v=4" />
+                <img class="msg-usrimg" src="[USRAVATARLINK]" />
             </div>
             <div class="msg-right">
                 <p class="msg-usrname">ludv</p>

@@ -1,7 +1,7 @@
 # ludverse
 
 <div style="width: 100%;">
-  <img src="content.svg" style="width: 100%;" alt="Click to see the source">
+    <img src="intro-bin.svg" style="width: 100%;" alt="Click to see the source">
 </div>
 
 ![Rust](https://img.shields.io/badge/Rust-black?style=for-the-badge&logo=rust&logoColor=#E57324)
