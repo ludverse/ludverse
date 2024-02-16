@@ -21,12 +21,13 @@
                 }
                 .msg-content {
                     margin-top: 1px;
+                }
             </style>
             
             <div class="main">
                 <div class="msg">
                     <div class="msg-left">
-                        <img class="msg-usrimg" src="https://avatars.githubusercontent.com/u/62475903?v=4">
+                        <img class="msg-usrimg" src="https://avatars.githubusercontent.com/u/62475903?v=4" />
                     </div>
                     <div class="msg-right">
                         <span class="msg-usrname">ludv</span>
