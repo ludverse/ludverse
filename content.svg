@@ -27,7 +27,7 @@
             <div class="main">
                 <div class="msg">
                     <div class="msg-left">
-                        <img class="msg-usrimg" src="https://avatars.githubusercontent.com/u/62475903?v=4" alt="user avatar icon"  />
+                        <xhtml:img class="msg-usrimg" src="https://avatars.githubusercontent.com/u/62475903?v=4" alt="user avatar icon"  />
                     </div>
                     <div class="msg-right">
                         <span class="msg-usrname">ludv</span>
