@@ -1,6 +1,4 @@
-<div style="width: 100%;">
-    <img src="intro-bin.svg" style="width: 100%;" alt="Aww...">
-</div>
+<img src="intro-bin.svg" alt="Aww...">
 
 ![Rust](https://img.shields.io/badge/Rust-black?style=for-the-badge&logo=rust&logoColor=#E57324)
 ![TypeScript](https://img.shields.io/badge/TypeScript-007ACC?style=for-the-badge&logo=typescript&logoColor=white)
