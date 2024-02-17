@@ -89,7 +89,7 @@
                     display: block;
                     background: #ffffff;
                     border-radius: 50%;
-                    animation-duration: 1500ms;
+                    animation-duration: var(--typing-speed);
                     animation-delay: calc(var(--bg-fade-delay) + var(--bg-fade-duration) + (var(--typing-speed) / 3 * var(--delay-order)));
                     animation-name: typingdot;
                     animation-iteration-count: infinite;
@@ -107,14 +107,10 @@
 
                 @keyframes msg-typing-delay {
                     0% {
-                        opacity: 0;
-                    }
-
-                    1% {
                         opacity: 1;
                     }
 
-                    99% {
+                    99.99999% {
                         opacity: 1;
                     }
 
