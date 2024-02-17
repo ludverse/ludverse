@@ -2,10 +2,15 @@
     <foreignObject width="100%" height="100%">
         <div xmlns="http://www.w3.org/1999/xhtml">
             <style>
-                * {
+                :root {
                     --bg-fade-delay: 600ms;
                     --bg-fade-duration: 1500ms;
                     --typing-speed: 750ms;
+                    --border-color: #4d4d4d;
+                    --small-color: #999999;
+                }
+
+                * {
                     margin: 0;
                     font-family: sans-serif;
                 }
@@ -22,10 +27,14 @@
                     animation-fill-mode: forwards;
                     box-sizing: border-box;
                 }
+                
+                .link {
+                    color: #2f81f7;
+                }
 
                 .msg {
                     --delay: 0ms;
-                    margin: 8px 0;
+                    margin-top: 0 !important;
                     padding: 8px 32px;
                     display: flex;
                     transition: 100ms;
@@ -51,12 +60,12 @@
 
                 .msg-content {
                     margin-top: 0;
+                    font-size: 0;
                     line-height: 0;
                     overflow: hidden;
                 }
 
-
-                .msg.anim, .msg-content.anim {
+                .msg, .msg-content {
                     opacity: 0;
                     animation-duration: 150ms;
                     animation-delay: calc(var(--bg-fade-delay) + var(--bg-fade-duration) + var(--delay));
@@ -64,8 +73,39 @@
                     animation-fill-mode: forwards;
                 }
 
+                .msg-embed {
+                    padding: 8px;
+                    width: 300px;
+                    display: grid;
+                    gap: 4px;
+                    border: 1px solid var(--border-color);
+                    border-radius: 8px;
+                }
+                
+                .msg-embed-desc {
+                    font-size: 0.85em;
+                    color: var(--small-color);
+                }
+
+                .msg-embed-lang {
+                    display: flex;
+                    justify-contents: center;
+                    font-size: 0.85em;
+                    color: var(--small-color);
+                }
+
+                .msg-embed-lang::before {
+                    content: "";
+                    margin-right: 4px;
+                    width: 1em;
+                    height: 1em;
+                    display: block;
+                    background-color: var(--lang-color);
+                    border-radius: 50%;
+                }
+
                 .msg-typing {
-                    margin-top: 4px;
+                    margin-top: 8px;
                     display: flex;
                     gap: 6px;
                     opacity: 1;
@@ -121,15 +161,17 @@
 
                 @keyframes msg-content-delay {
                     from {
-                        opacity: 0;
                         margin-top: 4px;
+                        font-size: 1em;
                         line-height: initial;
+                        opacity: 0;
                     }
 
                     to {
-                        opacity: 1;
                         margin-top: 4px;
+                        font-size: 1em;
                         line-height: initial;
+                        opacity: 1;
                     }
                 }
 
@@ -153,15 +195,15 @@
             
             <div class="main">
 
-                <div class="msg anim" style="--delay: 0ms">
+                <div class="msg" style="--delay: 0ms">
                     <div class="msg-left">
                         <img class="msg-usrimg" src="[USRAVATARLINK]" />
                     </div>
                     <div class="msg-right">
                         <p class="msg-usrname">ludv</p>
-                        <p class="msg-content anim" style="--delay: 2200ms">hello there :)</p>
-                        <p class="msg-content anim" style="--delay: 5000ms">welcome to my github profile</p>
-                        <div class="msg-typing" style="--duration: 5000ms">
+                        <p class="msg-content" style="--delay: 2000ms">hello there :)</p>
+                        <p class="msg-content" style="--delay: 3500ms">welcome to my github profile</p>
+                        <div class="msg-typing" style="--duration: 3500ms">
                             <span class="msg-typingdot" style="--delay-order: 1"></span>
                             <span class="msg-typingdot" style="--delay-order: 2"></span>
                             <span class="msg-typingdot" style="--delay-order: 3"></span>
@@ -169,16 +211,36 @@
                     </div>
                 </div>
 
-                <div class="msg anim" style="--delay: 5800ms">
+                <div class="msg" style="--delay: 4500ms">
                     <div class="msg-left">
                         <img class="msg-usrimg" src="[USRAVATARLINK]" />
                     </div>
                     <div class="msg-right">
                         <p class="msg-usrname">ludv</p>
-                        <p class="msg-content anim" style="--delay: 9400ms">i mostly do coding in rust nowadays but sometimes it happens that i work in html like for this little intro</p>
-                        <p class="msg-content anim" style="--delay: 14000ms">rn im working on an interpreter for my own programming language oxid</p>
-                        <p class="msg-content anim" style="--delay: 17000ms">go check it out!</p>
-                        <p class="msg-content anim" style="--delay: 19000ms">it'd be cool to see what you can make with it</p>
+                        <p class="msg-content" style="--delay: 8500ms">i mostly do coding in rust nowadays but sometimes it happens that i work on other stuff like for this little intro</p>
+                        <div class="msg-typing" style="--duration: 8500ms">
+                            <span class="msg-typingdot" style="--delay-order: 1"></span>
+                            <span class="msg-typingdot" style="--delay-order: 2"></span>
+                            <span class="msg-typingdot" style="--delay-order: 3"></span>
+                        </div>
+                    </div>
+                </div>
+                <div class="msg" style="--delay: 9500ms">
+                    <div class="msg-left">
+                        <img class="msg-usrimg" src="[USRAVATARLINK]" />
+                    </div>
+                    <div class="msg-right">
+                        <p class="msg-usrname">ludv</p>
+                        <p class="msg-content" style="--delay: 14000ms">rn im working on an interpreter for my own programming language oxid</p>
+                        <p class="msg-content" style="--delay: 16500ms">
+                            <p>go check it out <span class="link">https://github.com/ludverse/oxid</span></p>
+                        </p>
+                        <p class="msg-content msg-embed" style="--delay: 16500ms">
+                            <p class="link"><b>oxid</b></p>
+                            <p class="msg-embed-desc">An interpreted language blending Rust's powerful syntax with high level-like flexibility.</p>
+                            <p class="msg-embed-lang" style="--lang-color: #dea584">Rust</p>
+                        </p>
+                        <p class="msg-content" style="--delay: 19000ms">it'd be cool to see what you can make with it!</p>
                         <div class="msg-typing" style="--duration: 19000ms">
                             <span class="msg-typingdot" style="--delay-order: 1"></span>
                             <span class="msg-typingdot" style="--delay-order: 2"></span>
